@@ -1,4 +1,3 @@
-
 <?php 
 
 require_once 'connect.php';
@@ -20,9 +19,9 @@ if (isset($_POST['doGo'])) {
         if ($result = mysqli_query($db, "SELECT `password`, `id` FROM `users` WHERE `login`='" . $login . "'")) {
             while( $row = mysqli_fetch_assoc($result) ){ 
                 if ($row['id'] >= 0) {
-                    if ($pass == $row['password']) {
-                        echo "Вы вошли";
-                        include "menu.php";
+                    if (password_verify($pass, $row['password'])) {
+                        setcookie("current_user", $login);
+                        header('Location: http://localhost/simple_votings/index.php');
                         exit;
                     } else {
                          echo "Пароль не совпадает";
