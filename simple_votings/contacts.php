@@ -9,38 +9,38 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="styles/style.css" rel="stylesheet" type="text/css">
-  <style type="text/css">
-    img {
-      max-width: 100%;
-      max-height: 100%;
-    }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> 
+  <style>
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
 
-    h1 {
-      font-size: 50px;
-      margin-top: 30px;
-      margin-bottom: 20px;
-    }
+      h1 {
+        font-size: 50px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+      }
 
-    h2 {
-      margin-top: 40px;
-      margin-bottom: 20px;
-    }
+      h2 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
 
-    p {
-      font-size: 18px;
-      text-align: justify;
-    }
-  </style>
+      p {
+        font-size: 18px;
+        text-align: justify;
+      }
+    </style>
 </head>
-
-<body>
-    <?php
+<?php
     include "menu.php";
-    ?>
+?>
+<body>
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h1>Лучший сайт с голосованиями</h1>
+        <h1>Лучший сайт с тестами</h1>
       </div>
     </div>
   </div>
@@ -48,7 +48,7 @@
     <div class="row">
       <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
         <p>Сайт предоставляет возможность регистрации и авторизации пользователей. В будущем предполагается
-        возможность создания пользователем опроса и участии в любых голосованиях.</p>
+        возможность создания пользователем тестов.</p>
         <p>Если возникли любые проблемы Вы всегда можете связаться с нами.</p>
       </div>
       <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
@@ -59,17 +59,12 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h2>Контакты для связи</h2>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <p>Телефон: +7 (925) 052-49-24</p>
-        <p>Почта: <a href="mailto: alexei2004@inbox.ru">alexei2004@inbox.ru</a></p>
-        <p>ВК: <a href="https://vk.com/id187600574">id187600574</a></p>
-        <p>Телеграм: <a href="https://t.me/Alex_Krav">@Alex_Krav</a></p>
+        <p class="sosmed-author">
+        <a href="https://www.facebook.com/profile.php?id=100025994162240"><i class="fa fa-facebook" title="Facebook"></i></a>
+        <a href="https://twitter.com/home?lang=ru"><i class="fa fa-twitter" title="Twitter"></i></a>
+        <a href="https://vk.com/id187600574"><i class="fa fa-vk" title="VK"></i></a>
+        <a href="https://t.me/Alex_Krav"><i class="fa fa-telegram" title="Telegram"></i></a>
+        </p>
       </div>
     </div>
   </div>
