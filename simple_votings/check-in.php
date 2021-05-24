@@ -23,19 +23,32 @@ if (isset($_POST['doGo'])) {
     if (!$_POST['login']) {
         $error = 'Введите login';
     }
+
+    if (!$_POST['nam']) {
+        $error = 'Введите имя';
+    }
+
+    if (!$_POST['surname']) {
+        $error = 'Введите фамилию';
+    }
  
     if (!$error) {
         $login = $_POST['login'];
         $email = $_POST['email'];
-        $pass = $_POST['pass'];
-        $DOB = $_POST['year_of_birth'];
+        $pass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+        $name = $_POST["nam"];
+        $surname = $_POST["surname"];
+        date_default_timezone_set('Europe/Moscow');
+        $data_joined = date("Y-m-d H:i:s");
         
-        if (mysqli_query($db, "INSERT INTO `users` (`login`, `email`, `password`, `DOB`) VALUES 
-        ('" . $login . "','" . $email . "','" . $pass . "', '" . $DOB . "')"))
-            echo 'Регистрация прошла успешна';
+        if (mysqli_query($db, "INSERT INTO `users` (`name`, `surname`, `login`, `email`, `password`, `data_joined`) VALUES 
+        ('" . $name . "','" . $surname . "','" . $login . "','" . $email . "','" . $pass . "','" . $data_joined . "')"))
+        {
+            setcookie("current_user", $login);
+            header('Location: http://localhost/simple_votings/index.php');
+        }
     } else {
         echo $error; 
     }
 }
-    include "check-in_form.php";
 ?>
